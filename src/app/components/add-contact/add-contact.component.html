@@ -1,0 +1,51 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 fw-bold text-success">Add Contact</p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum dolorum facere facilis fuga illum ipsa ipsam laborum, molestias natus nihil obcaecati perferendis placeat quam quo repellendus sequi vitae? Assumenda corporis cum nisi nulla temporibus.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <form (submit)="createSumbit()">
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.name" name="name" class="form-control" placeholder="Name" type="text" >
+        </div>
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.photo" name="photo" class="form-control" placeholder="Photo Url" type="text" >
+        </div>
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.email" name="email" class="form-control" placeholder="Email" type="email" >
+        </div>
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.mobile" name="mobile" class="form-control" placeholder="Mobile" type="number" >
+        </div>
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.company" name="company" class="form-control" placeholder="Company" type="text" >
+        </div>
+        <div class="mb-2">
+          <input required="true" [(ngModel)] = "contact.city" name="city" class="form-control" placeholder="City" type="text" >
+        </div>
+        <div class="mb-2">
+          <select required="true" [(ngModel)] = "contact.groupId" name="groupId" class="form-control" *ngIf="groups.length > 0">
+            <option value="">Select a Group</option>
+            <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+
+          </select>
+        </div>
+        <div class="mb-2">
+          <input class="btn btn-success" type="submit" value="Create" >
+          <a class="btn btn-outline-success ms-2" routerLink="/" >Close</a>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <img alt="" class="contact-img" [src]="contact.photo">
+    </div>
+  </div>
+</div>
+

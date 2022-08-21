@@ -1,0 +1,61 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 text-success fw-bold">Contacts
+        <a class="btn btn-success btn-sm" routerLink="/contacts/add" >
+          <i class="fa fa-user-plus"></i>
+          New</a>
+      </p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae corporis, distinctio dolorem eius est illum ipsa neque non quae quibusdam, sed sunt voluptate? Animi eius natus pariatur quia voluptas.</p>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+<div class="row">
+  <div class="col">
+<input type="text" class="form-control" placeholder="Search User" type="text">
+  </div>
+  <div class="col">
+<input class="btn btn-outline-dark" type="submit" value="Search" >
+  </div>
+</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="!loading && contacts.length > 0" class="container mt-3" >
+  <div class="row">
+    <div *ngFor="let contact of contacts" class="col-md-6"  >
+      <div class="card list-group-item-success shadow-lg my-2">
+        <div class="card-body">
+<div class="row align-items-center">
+  <div class="col-sm-4">
+    <img [src]="contact.photo" alt=""  class="contact-img" >
+  </div>
+  <div class="col-sm-7">
+<ul class="list-group">
+  <li class="list-group-item">Name : <span class="fw-bold">{{contact.name}}</span></li>
+  <li class="list-group-item">Email : <span class="fw-bold">{{contact.email}}</span></li>
+  <li class="list-group-item">Mobile : <span class="fw-bold">{{contact.mobile}}</span></li>
+</ul>
+  </div>
+  <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+    <a class="btn btn-warning my-1" routerLink="/contacts/view/{{contact.id}}" >
+      <i class="fa fa-face-rolling-eyes"></i>
+    </a>
+    <a class="btn btn-primary my-1" routerLink="/contacts/edit/{{contact.id}}" >
+      <i class="fa fa-pencil"></i>
+    </a>
+    <button class="btn btn-danger my-1" (click)="clickDeleteContact(contact.id)" >
+      <i class="fa fa-trash"></i>
+    </button>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

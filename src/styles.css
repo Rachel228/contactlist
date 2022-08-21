@@ -1,0 +1,12 @@
+body{
+  font-family: "Bell MT";
+  background-color: blanchedalmond;
+}
+.contact-img{
+  width: 150px;
+  border-radius: 50%;
+}
+.contact-img-big{
+  width: 200px;
+  border-radius: 50%;
+}

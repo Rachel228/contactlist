@@ -1,0 +1,52 @@
+{
+  "contacts": [
+    {
+      "id": "12",
+      "name": "Yana Bondarchuk",
+      "company": "YouTube",
+      "email": "yana@gmail.com",
+      "city": "Lviv",
+      "mobile": "0967010552",
+      "photo": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Images-HD.png",
+      "groupId": "3"
+    },
+    {
+      "id": "22",
+      "name": "Yana Bond",
+      "company": "Friend",
+      "email": "yana12@gmail.com",
+      "city": "Lviv",
+      "mobile": "0968010552",
+      "photo": "https://cdn.pixabay.com/photo/2021/02/12/07/03/icon-6007530_1280.png",
+      "groupId": "2"
+    },
+    {
+      "name": "Yana Bondarchuk",
+      "mobile": 967010768,
+      "city": "Новоград-Волинський",
+      "photo": "https://cdn-icons-png.flaticon.com/512/219/219969.png",
+      "email": "yana.bondarchuk.knm.2018@gmail.com",
+      "company": "Teach",
+      "groupId": "1",
+      "id": "5yvF7sb"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Colleague"
+    },
+    {
+      "id": "2",
+      "name": "Friend"
+    },
+    {
+      "id": "3",
+      "name": "Family"
+    },
+    {
+      "id": "4",
+      "name": "Service"
+    }
+  ]
+}

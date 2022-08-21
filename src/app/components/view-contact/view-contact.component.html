@@ -1,0 +1,34 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <p class="h3 fw-bold text-success">View Contact</p>
+      <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum dolorum facere facilis fuga illum ipsa ipsam laborum, molestias natus nihil obcaecati perferendis placeat quam quo repellendus sequi vitae? Assumenda corporis cum nisi nulla temporibus.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="!loading && isNotEmpty()">
+  <div class="row align-items-center">
+    <div class="col-sm-4">
+      <img class="contact-img-big"  [src]="contact.photo" alt="">
+    </div>
+    <div class="col-sm-6">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">Name : <span class="fw-bold">{{contact.name}}</span></li>
+        <li class="list-group-item list-group-item-success">Email : <span class="fw-bold">{{contact.email}}</span></li>
+        <li class="list-group-item list-group-item-success">Mobile : <span class="fw-bold">{{contact.mobile}}</span></li>
+        <li class="list-group-item list-group-item-success">Company : <span class="fw-bold">{{contact.company}}</span></li>
+        <li class="list-group-item list-group-item-success">City : <span class="fw-bold">{{contact.city}}</span></li>
+        <li class="list-group-item list-group-item-success">Group Name: <span class="fw-bold">{{group.name}}</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <a routerLink="/" class="btn btn-outline-success">
+        <i class="fa fa-rotate-back"></i> Back</a>
+    </div>
+  </div>
+</div>
