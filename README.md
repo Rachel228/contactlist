@@ -17,4 +17,5 @@ npm start
 
 ## Features
 · Create, view, update and delete contacts
+
 · Contact data is stored in db.json
